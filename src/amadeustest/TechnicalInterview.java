@@ -1,9 +1,6 @@
 package amadeustest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -21,6 +18,9 @@ public class TechnicalInterview {
     }
 
     private static int percentageLetter(String s, char letter) {
+        if(Objects.isNull(s))
+            return 0;
+
         double amount = 0;
         for(char value : s.toCharArray())
             if(value == letter)
