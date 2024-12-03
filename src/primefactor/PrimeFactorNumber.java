@@ -15,8 +15,8 @@ public class PrimeFactorNumber {
     public void calculate(){
         int outcome  = IntStream.rangeClosed(2, 1000000).boxed()
                 .collect(Collectors.partitioningBy(this::isPrime)).get(true)
-                .stream().filter(i -> 600851475143L % i == 0).collect(Collectors.toList())
-                .stream().max(Comparator.comparing(Function.identity())).get();
+                .stream().filter(i -> 600851475143L % i == 0)
+                .max(Comparator.comparing(Function.identity())).get();
         System.out.println(outcome);
     }
     private boolean isPrime(int value){
