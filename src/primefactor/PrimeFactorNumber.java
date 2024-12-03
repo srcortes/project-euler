@@ -1,6 +1,7 @@
 package primefactor;
 
 import java.util.Comparator;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -15,7 +16,7 @@ public class PrimeFactorNumber {
         int outcome  = IntStream.rangeClosed(2, 1000000).boxed()
                 .collect(Collectors.partitioningBy(this::isPrime)).get(true)
                 .stream().filter(i -> 600851475143L % i == 0).collect(Collectors.toList())
-                .stream().max(Comparator.comparing(num -> num)).get();
+                .stream().max(Comparator.comparing(Function.identity())).get();
         System.out.println(outcome);
     }
     private boolean isPrime(int value){
