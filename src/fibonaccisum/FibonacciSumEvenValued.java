@@ -17,21 +17,10 @@ public class FibonacciSumEvenValued {
 
     private void calculate(){
         //4613732
-
        int a = Stream.iterate(new int[]{1, 2},
                        j -> new int[]{j[1], j[0] + j[1]})
                .map(j -> j[0])
                .filter(i->i%2==0).takeWhile(i -> i < 4000000).mapToInt(val->val).sum();
         System.out.println("value: " + a);
-
-
-
-
-
-
-
-
-
-
     }
 }
