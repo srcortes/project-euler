@@ -12,15 +12,14 @@ public class LargePalindromeProduct {
         List<Integer> list = IntStream.rangeClosed(100, 999).boxed()
                 .collect(Collectors.toList());
         List<Integer> outcome = new ArrayList<>();
-
-            for(int j = 0; j < list.size(); j++) {
-                for(int i = j; i < list.size(); i++){
-                   int value =  list.get(j) * list.get(i);
-                   StringBuilder builder = new StringBuilder(String.valueOf(value)).reverse();
-                   if(String.valueOf(value).contentEquals(builder))
-                       outcome.add(value);
-                }
+        for(int j = list.size()-1; j >= 0 ; j--){
+            for(int i = j; i >= 0; i--){
+                int value =  list.get(j) * list.get(i);
+                StringBuilder builder = new StringBuilder(String.valueOf(value)).reverse();
+                if(String.valueOf(value).contentEquals(builder))
+                    outcome.add(value);
             }
+        }
         System.out.println(outcome.stream().max(Comparator.comparing(Function.identity())).get());
         }
 
