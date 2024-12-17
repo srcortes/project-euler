@@ -18,7 +18,6 @@ public class LargePalindromeProduct {
 
                 if(isPalindrome(value))
                     maxPalindrome = value;
-
             }
         }
         System.out.println("1.) " + System.currentTimeMillis());
@@ -42,9 +41,7 @@ public class LargePalindromeProduct {
        }
         System.out.println("2.) "+System.currentTimeMillis());
         System.out.println(maxPalindrome);
-
     }
-
     private static boolean isPalindrome(int value){
         String number = Integer.toString(value);
         int increment = 0;
@@ -58,6 +55,4 @@ public class LargePalindromeProduct {
         }
         return true;
     }
-
-
 }
