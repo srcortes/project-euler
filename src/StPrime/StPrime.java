@@ -11,7 +11,7 @@ public class StPrime {
     }
 
     public static void calculateNumberPosition(){
-        List<Integer> listPrime = IntStream.rangeClosed(1, 1000000).boxed().collect(Collectors.toList())
+        List<Integer> listPrime = IntStream.rangeClosed(1, 105000).boxed().collect(Collectors.toList())
                 .stream().filter(StPrime::isPrime).collect(Collectors.toList());
         System.out.println(listPrime.get(10001));
 
