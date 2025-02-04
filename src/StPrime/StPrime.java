@@ -14,7 +14,6 @@ public class StPrime {
         List<Integer> listPrime = IntStream.rangeClosed(1, 105000).boxed().collect(Collectors.toList())
                 .stream().filter(StPrime::isPrime).collect(Collectors.toList());
         System.out.println(listPrime.get(10001));
-
     }
 
     private static boolean isPrime(int value){
