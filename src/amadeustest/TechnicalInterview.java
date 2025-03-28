@@ -34,7 +34,10 @@ public class TechnicalInterview {
         list1.addAll(list2);
         Map<String, Long> map = list1.stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+
         map.values().removeIf(i -> i != 2);
+        System.out.println(map);
         return map.entrySet().size();
     }
 }
