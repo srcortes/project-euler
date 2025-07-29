@@ -15,7 +15,7 @@ public class HighlyDivisibleTriangularNumber {
     }
     public static int verifyDivisors(int value) {
        int count = 0;
-       int sqrt = (int) Math.sqrt(value);
+       int sqrt = (int) Math.sqrt(value);   
 
         for(int j = 1; j < sqrt; j++){
              if(value % j == 0)
