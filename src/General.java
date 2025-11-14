@@ -72,9 +72,8 @@ public class General {
     }
 
     public static void main(String[] args) {
-        ProductoImpl producto = new ProductoImpl("Producto 1", 100.0);
-        algo(producto);
-
+        String value = "101";
+        System.out.println(value.substring(0,1));
 
 
 
